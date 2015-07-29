@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge"/>
+        <script>
+            var STATIC_PATH = top.STATIC_PATH,
+                    APP_PATH = top.APP_PATH;
+        </script>
+        <link rel="stylesheet" href="../../../../static/css/bootstrapPure.css"/>
+        <link rel="stylesheet" href="../../../../static/css/global.css"/>
+        <link rel="stylesheet" href="css.css"/>
+        <script type="text/javascript" src="../../../../static/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../../../../static/modules/lib/seajs/2.2.1/js.js"></script>
+
+        <script type="text/javascript" src="../../../../static/modules/lib/seajs/config.js"></script>
+    </head>
+    <body>
+        <form class="form-horizontal user-center-address-form" id="userCenterAddressForm">
+            <div class="form-group row">
+                <div class="col-1-5 control-label"><span class="required">*</span> 收货人姓名</div>
+                <div class="col-4-5">
+                    <input type="text" class="form-control" value="" name="name" id="name" placeholder="例：王芸芸" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1-5 control-label"><span class="required">*</span> 所在地区</div>
+                <div class="col-4-5 input-container" id="areadiv"></div>
+                <input type="hidden" id="hidarea" value=""/>
+            </div>
+            <div class="form-group row">
+                <div class="col-1-5 control-label"><span class="required">*</span> 街道地址</div>
+                <div class="col-4-5">
+                    <textarea id="street" placeholder="详细门牌号" name="street" autocomplete="off" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1-5 control-label"><span class="required">*</span> 联系方式</div>
+                <div class="col-4-5">
+                    <input type="text" class="form-control" name="phone" value="" id="phone" placeholder="手机号码或固定电话" autocomplete="off">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1-5 control-label"></div>
+                <div class="col-4-5 checkbox">
+                    <label>
+                        <input type="checkbox" value="1" id="defaultAdd" name="default" autocomplete="off">
+                        设置为默认地址
+                    </label>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-1-5 control-label"></div>
+                <div class="col-4-5 checkbox">
+                    <button type="button" class="btn btn-orange" id="userCenterAddressFormSubmit">保存</button>
+                </div>
+            </div>
+        </form>
+        <script type="text/javascript">
+                    seajs.use(['./index']);
+        </script>
+    </body>
+</html>
